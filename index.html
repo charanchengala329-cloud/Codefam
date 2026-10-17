@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab - Online Compiler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Code<span>Lab</span></div>
+        <div class="tagline">Online Code Compiler</div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h1>Write. Run. Learn.</h1>
+            <p>Compile Python, C and Java code online.</p>
+        </section>
+
+        <section class="compiler">
+            <div class="toolbar">
+                <div class="language-control">
+                    <label for="language">Language:</label>
+                    <select id="language">
+                        <option value="python">Python</option>
+                        <option value="c">C</option>
+                        <option value="java">Java</option>
+                    </select>
+                </div>
+
+                <div class="actions">
+                    <button id="clearBtn" class="clear-btn">Clear</button>
+                    <button id="runBtn" class="run-btn">
+                        ▶ Run Code
+                    </button>
+                </div>
+            </div>
+
+            <div class="editor-heading">
+                <span>main code editor</span>
+                <span id="languageLabel">PYTHON</span>
+            </div>
+
+            <textarea id="code" spellcheck="false"
+                aria-label="Code editor"
+                placeholder="Write your code here...">print("Hello, World!")</textarea>
+
+            <div class="input-section">
+                <label for="stdin">Program Input (stdin)</label>
+                <textarea id="stdin"
+                    placeholder="Enter input for your program..."></textarea>
+            </div>
+
+            <div class="output-header">
+                <h3>Output Console</h3>
+                <button id="clearOutputBtn" class="text-btn">
+                    Clear output
+                </button>
+            </div>
+
+            <pre id="output" aria-live="polite">Your output will appear here...</pre>
+            <div id="status" role="status">Ready</div>
+        </section>
+
+        <footer>
+            Built for learners and developers.
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
