@@ -1,0 +1,270 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #58a6ff;
+}
+
+.tagline {
+    color: #8b949e;
+    font-size: 14px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #8b949e;
+}
+
+.compiler {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.toolbar {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #30363d;
+}
+
+.language-control,
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+label {
+    color: #c9d1d9;
+    font-size: 14px;
+}
+
+select,
+button {
+    font: inherit;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+select {
+    background: #21262d;
+    color: #e6edf3;
+    border: 1px solid #484f58;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #58a6ff;
+    outline-offset: 2px;
+}
+
+.run-btn {
+    background: #238636;
+    color: white;
+    font-weight: 600;
+}
+
+.run-btn:hover {
+    background: #2ea043;
+}
+
+.run-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.clear-btn {
+    background: #30363d;
+    color: #e6edf3;
+}
+
+.clear-btn:hover {
+    background: #484f58;
+}
+
+.editor-heading,
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 18px;
+    color: #8b949e;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#languageLabel {
+    color: #58a6ff;
+}
+
+#code {
+    display: block;
+    width: 100%;
+    min-height: 340px;
+    resize: vertical;
+    padding: 20px;
+    background: #0d1117;
+    color: #e6edf3;
+    border: none;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    tab-size: 4;
+}
+
+.input-section {
+    padding: 18px;
+    border-bottom: 1px solid #30363d;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#stdin {
+    width: 100%;
+    min-height: 75px;
+    padding: 12px;
+    resize: vertical;
+    background: #0d1117;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font: 14px Consolas, monospace;
+}
+
+.output-header {
+    padding-top: 18px;
+}
+
+.output-header h3 {
+    color: #e6edf3;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.text-btn {
+    background: transparent;
+    color: #58a6ff;
+    padding: 5px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+}
+
+#output {
+    min-height: 120px;
+    max-height: 350px;
+    overflow: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding: 18px;
+    background: #0d1117;
+    color: #3fb950;
+    font: 14px/1.7 Consolas, monospace;
+}
+
+#status {
+    padding: 10px 18px;
+    color: #8b949e;
+    font-size: 12px;
+    border-top: 1px solid #30363d;
+}
+
+footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding: 25px 0;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .tagline {
+        font-size: 11px;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 25px;
+    }
+
+    .toolbar {
+        align-items: stretch;
+    }
+
+    .language-control,
+    .actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .language-control select {
+        flex: 1;
+    }
+
+    #code {
+        min-height: 280px;
+        font-size: 13px;
+    }
+}
